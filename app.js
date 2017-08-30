@@ -453,5 +453,7 @@ app.use(function(err, req, res, next) {
     });
 });
 
-app.listen(config.listenPort, config.listenHost);
+app.listen(config.listenPort, function(){
+  console.log('Server running at http://%s:%s', config.listenHost, config.listenPort);
+});
 module.exports = app;
