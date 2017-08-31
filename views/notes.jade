@@ -34,7 +34,7 @@ block content
                 select(name="theme", class="form-control themeSelector")
                     option(value="") Metro (default)
                     option(value="superhero") Dark Metro
-                    option(value="sandstone") Sandstone 
+                    option(value="sandstone") Sandstone
                     option(value="simplex") Simplex
                     option(value="readable") Readable
                     option(value="paper") Material
@@ -49,12 +49,16 @@ block content
             div(style="width:100%;height:450px;text-align:left", name="area", id="area", contenteditable="true", TabIndex = "-1", class="form-control")
                 | <div id="idtitle"></div>
                 | <div id="iddate"></div>
-            
+
+            form(class="dropzone" action="" method="POST" enctype="multipart/form-data")
+            input(type="file" name="file")
+
     script(src="//cdn.ckeditor.com/4.4.7/standard/ckeditor.js")
     script(src="/javascript/guid.js")
     script(src="/javascript/notes.js")
     script(src="/javascript/alert.js")
     script(src="/javascript/shortcut.js")
+    script(src="/javascript/dropzone.js")
 
     script
         | shortcut.add("Ctrl+O",function() {
